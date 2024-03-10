@@ -1,15 +1,19 @@
 <template>
-    <div>
-<input type="text" placeholder="Pesquisa"  v-model="search">
-    {{search}}
-    </div>
+  <div>
+    <input type="text" :placeholder="information" v-model="search" />
+
+    Search.vue
+    {{ search }}
+  </div>
 </template>
 
 <script setup>
-import { ref} from "vue";
-const search = ref("")
+const props = defineProps(['information'])
+
+const search = defineModel()
+
+
+
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

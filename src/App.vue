@@ -1,19 +1,22 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
-import Search from './components/Search.vue';
+import Search from './components/Search.vue'
+import { ref } from 'vue';
 
+const information = "Pesquise..."
+
+const searchContent = ref('te amo meu amor')
 </script>
 
 <template>
   <header>
-    
-
     <div class="wrapper">
-     <Search/>
-
+      <Search :information :search-content v-model="searchContent"/>
+      App.vue
+      {{ searchContent }}
       <nav>
-        <RouterLink :to="{name: 'pesquisa'}">Pesquisa</RouterLink>
-        <RouterLink :to="{name: 'receita'}">Receita</RouterLink>
+        <RouterLink :to="{ name: 'pesquisa' }">Pesquisa</RouterLink>
+        <RouterLink :to="{ name: 'receita' }">Receita</RouterLink>
       </nav>
     </div>
   </header>
