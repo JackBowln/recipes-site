@@ -11,7 +11,6 @@ const searchContent = ref('te amo meu amor')
 <template>
   <header>
     <div class="wrapper">
-      Search Bar
       <Search :information :search-content v-model="searchContent"/>
       App.vue
       {{ searchContent }}
