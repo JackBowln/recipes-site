@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <div class="search-bar">
+    Search.vue
     <input type="text" :placeholder="information" v-model="search" />
 
-    Search.vue
     {{ search }}
   </div>
 </template>
@@ -16,4 +16,9 @@ const search = defineModel()
 
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.search-bar {
+    display: flex;
+    flex-direction: column;
+}
+</style>
