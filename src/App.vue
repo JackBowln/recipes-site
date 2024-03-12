@@ -2,10 +2,15 @@
 import { RouterLink, RouterView } from 'vue-router'
 import Search from './components/Search.vue'
 import { ref } from 'vue';
+import Cards from './components/Cards.vue'
+import { cookbook } from './data/recipes.js'
+import { ref } from 'vue'
+import axios from 'axios'
 
 const information = "Pesquise..."
 
 const searchContent = ref('te amo meu amor')
+const information = 'Pesquise...'
 </script>
 
 <template>
@@ -22,6 +27,19 @@ const searchContent = ref('te amo meu amor')
   </header>
 
   <RouterView />
+  <div class="d-flex flex-column">
+    <header class="d-flex justify-center">
+      <Search :information :search-content v-model="searchContent" />
+    </header>
+    <Cards
+      :loading="false"
+      v-for="(value, index) in cookbook.recipes"
+      :recipe="value"
+      :key="index"
+    />
+  </div>
+
+  <!--<RouterView />-->
 </template>
 
 <style scoped>
