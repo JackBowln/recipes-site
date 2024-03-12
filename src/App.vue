@@ -4,10 +4,6 @@ import Search from './components/Search.vue'
 import { ref } from 'vue';
 import Cards from './components/Cards.vue'
 import { cookbook } from './data/recipes.js'
-import { ref } from 'vue'
-import axios from 'axios'
-
-const information = "Pesquise..."
 
 const searchContent = ref('te amo meu amor')
 const information = 'Pesquise...'
