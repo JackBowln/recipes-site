@@ -5,6 +5,16 @@ import Cards from './components/Cards.vue'
 import { cookbook } from './data/recipes.js'
 import { ref } from 'vue'
 import axios from 'axios'
+import {onMounted } from 'vue'
+import { supabase } from './api/supabaseClient'
+
+  const recipes = ref([])
+
+  async function getRecipes() {
+    const { data } = await supabase.from('recipes').select()
+    recipes.value = data
+  }
+    getRecipes()
 
 
 const information = 'Pesquise...'
