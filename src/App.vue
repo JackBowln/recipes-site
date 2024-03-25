@@ -27,7 +27,7 @@ const information = 'Pesquise...'
     </header>
     <Cards
       :loading="false"
-      v-for="(value, index) in cookbook.recipes"
+      v-for="(value, index) in recipes"
       :recipe="value"
       :key="index"
     />
