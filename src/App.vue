@@ -1,15 +1,11 @@
 <script setup>
 import { RouterLink, RouterView } from 'vue-router'
+import HeaderRouter from './components/HeaderRouter.vue'
 </script>
 
 <template>
-  <nav>
-    <RouterLink :to="{ name: 'receita' }">Home</RouterLink>
-    <br />
-    <RouterLink :to="{ name: 'registo' }">Registo</RouterLink>
-  </nav>
-
-  <RouterView />
+   <HeaderRouter></HeaderRouter>
+   <RouterView />
 </template>
 
 <style scoped></style>
