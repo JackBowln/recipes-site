@@ -9,7 +9,7 @@
       ></v-progress-linear>
     </template>
 
-    <v-img height="250" :src="recipe.image" cover></v-img>
+    <v-img height="250" :src="recipe.imageUrl" cover></v-img>
 
     <v-card-item>
       <v-card-title>{{ recipe.name }}</v-card-title>
@@ -26,10 +26,7 @@
         <v-rating v-model="rating" active-color="blue" color="orange-lighten-1"></v-rating>
         <div class="text-grey ms-4">4.5 (413)</div>
       </v-row>
-
-      <!-- <div class="my-4 text-subtitle-1">$ • Italian, Cafe</div> -->
       <br />
-      <!-- saída de ranhura -->
       <div v-for="(value, index) in recipe.ingredients" :key="index">
         {{ value }}
       </div>
