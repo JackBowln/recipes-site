@@ -79,7 +79,7 @@ const recipe = reactive({
   author: '',
   imageUrl: imageUrl.value,
   preparation: '',
-  ingredients: null,
+  ingredients: [],
   cooking_time: null
 })
 const terms = ref(false)
